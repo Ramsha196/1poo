@@ -51,7 +51,7 @@ function checkCookie() {
   <link rel="stylesheet" type="text/css" href="//wpcc.io/lib/1.0.2/cookieconsent.min.css"/><script src="//wpcc.io/lib/1.0.2/cookieconsent.min.js"></script><script>window.addEventListener("load", function(){window.wpcc.init({"border":"thick","corners":"large","colors":{"popup":{"background":"#222222","text":"#ffffff","border":"#fde296"},"button":{"background":"#fde296","text":"#000000"}},"padding":"large","margin":"large","transparency":"25","fontsize":"small","content":{"href":"https://www.cookiepolicygenerator.com/live.php?token=JCotLyBlfYKy4sOYVipIvErAcLKyEZQe","button":"Accept","message":"By using this website you agree to us using cookies to ensure you get the best experience on our website.","link":"Find Out More"}})});</script>
   </head>
   <body onload="checkCookie()">
-    <h1>Cameron Ball</h1>
+    <h1 id="awesome">Cameron Ball</h1>
     <hr>
     <center>
       <h1>
@@ -59,7 +59,7 @@ function checkCookie() {
       </h1>
     </center>
     <h3>Check This Out Productions</h3>
-    <div style="height:30px;width:60%;border:5px solid #ccc;overflow:auto;">
+    <div style="height:50px;width:60%;border:5px solid #ccc;overflow:auto;">
 As you can see, once there's enough text in this box, the box will grow scroll bars... that's why we call it a scroll box! You could also place an image into the scroll box.
 </div>
     <hr>
@@ -80,6 +80,80 @@ As you can see, once there's enough text in this box, the box will grow scroll b
      h1 {
         cursor: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/happy.png"), none;
        }
+     .awesome {
+      
+      font-family: futura;
+      font-style: italic;
+      
+      width:100%;
+      
+      margin: 0 auto;
+      text-align: center;
+      
+      color:#313131;
+      font-size:45px;
+      font-weight: bold;
+      position: absolute;
+      -webkit-animation:colorchange 20s infinite alternate;
+      
+      
+    }
+
+    @-webkit-keyframes colorchange {
+      0% {
+        
+        color: blue;
+      }
+      
+      10% {
+        
+        color: #8e44ad;
+      }
+      
+      20% {
+        
+        color: #1abc9c;
+      }
+      
+      30% {
+        
+        color: #d35400;
+      }
+      
+      40% {
+        
+        color: blue;
+      }
+      
+      50% {
+        
+        color: #34495e;
+      }
+      
+      60% {
+        
+        color: blue;
+      }
+      
+      70% {
+        
+        color: #2980b9;
+      }
+      80% {
+     
+        color: #f1c40f;
+      }
+      
+      90% {
+     
+        color: #2980b9;
+      }
+      
+      100% {
+        
+        color: pink;
+      }
+    }
     </style>
   </body>
 </html>
