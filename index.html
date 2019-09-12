@@ -2,20 +2,6 @@
 <html>
   <head>
     <script>
-var elem = document.getElementById("poo");
-function openFullscreen() {
-  if (elem.requestFullscreen) {
-    elem.requestFullscreen();
-  } else if (elem.mozRequestFullScreen) { /* Firefox */
-    elem.mozRequestFullScreen();
-  } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
-    elem.webkitRequestFullscreen();
-  } else if (elem.msRequestFullscreen) { /* IE/Edge */
-    elem.msRequestFullscreen();
-  }
-}
-</script>
-    <script>
       
       function setCookie(cname,cvalue,exdays) {
        var d = new Date();
@@ -65,8 +51,46 @@ function checkCookie() {
   <link href="https://fonts.googleapis.com/css?family=Hepta+Slab:300&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="//wpcc.io/lib/1.0.2/cookieconsent.min.css"/><script src="//wpcc.io/lib/1.0.2/cookieconsent.min.js"></script><script>window.addEventListener("load", function(){window.wpcc.init({"border":"thick","corners":"large","colors":{"popup":{"background":"#222222","text":"#ffffff","border":"#fde296"},"button":{"background":"#fde296","text":"#000000"}},"padding":"large","margin":"large","transparency":"25","fontsize":"small","content":{"href":"https://www.cookiepolicygenerator.com/live.php?token=JCotLyBlfYKy4sOYVipIvErAcLKyEZQe","button":"Accept","message":"By using this website you agree to us using cookies to ensure you get the best experience on our website.","link":"Find Out More"}})});</script>
   </head>
-  <body id="background" onload="checkCookie()">
-    <div>
+  <body onload="checkCookie()">
+        <style>
+    body {
+    display: flex;
+}
+.switch {
+    align-self: flex-end;
+    margin: 0.9375rem;
+}
+.inner-switch {
+    display: inline-block;
+    cursor: pointer;
+    border: 1px solid #555;
+    border-radius: 1.25rem;
+    width: 3.125rem;
+    text-align: center;
+    font-size: 1rem;
+    padding: 0.1875rem;
+    margin-left: 0.3125rem;
+}
+.dark,
+.dark * {
+    background-color: #222;
+    color: #e6e6e6;
+    border-color: #e6e6e6;
+}
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js">
+    </script>
+    	 <script>
+     $( ".inner-switch" ).on("click", function() {
+    if( $( "body" ).hasClass( "dark" )) {
+      $( "body" ).removeClass( "dark" );
+      $( ".inner-switch" ).text( "OFF" );
+    } else {
+      $( "body" ).addClass( "dark" );
+      $( ".inner-switch" ).text( "ON" );
+    }
+});
+    </script>
     <center>
     <h1 id="awesome">Cameron Ball</h1>
     <hr>
@@ -186,6 +210,5 @@ As you can see, once there's enough text in this box, the box will grow scroll b
       }
     }
     </style>
-    </div>
   </body>
 </html>
