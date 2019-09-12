@@ -53,7 +53,7 @@ function checkCookie() {
   </head>
   <body onload="checkCookie()">
         <div class="switch">Dark mode:              
-        <span class="inner-switch">OFF</span>
+        <span class="inner-switch">Disabled</span>
     </div>
         <style>
 .switch {
@@ -88,7 +88,7 @@ function checkCookie() {
       $( ".inner-switch" ).text( "OFF" );
     } else {
       $( "body" ).addClass( "dark" );
-      $( ".inner-switch" ).text( "ON" );
+      $( ".inner-switch" ).text( "Enabled" );
     }
 });
     </script>
@@ -100,7 +100,6 @@ function checkCookie() {
       <br>
       <br>
     <br style = “line-height:300;”>
-   <p onclick="myFunction()">Click me for dark mode!</p>
 
 <script>
 function myFunction() {
