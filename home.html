@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      
+      function setCookie(cname,cvalue,exdays) {
+       var d = new Date();
+       d.setTime(d.getTime() + (exdays*24*60*60*1000));
+      var expires = "expires=" + d.toGMTString();
+      document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+    }
+
+      function getCookie(cname) {
+       var name = cname + "=";
+        var decodedCookie = decodeURIComponent(document.cookie);
+        var ca = decodedCookie.split(';');
+        for(var i = 0; i < ca.length; i++) {
+         var c = ca[i];
+          while (c.charAt(0) == ' ') {
+           c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+
+function checkCookie() {
+  var user=getCookie("username");
+  if (user != "") {
+    alert("Thanks for visiting again " + user + "!");
+  } else {
+     user = prompt("Please enter your name:","");
+     if (user != "" && user != null) {
+       setCookie("username", user, 30);
+     }
+  }
+}
+</script>
+    <title>Cameron Ball's Website</title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-147345119-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-147345119-1');
+    </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Hepta+Slab:300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="//wpcc.io/lib/1.0.2/cookieconsent.min.css"/><script src="//wpcc.io/lib/1.0.2/cookieconsent.min.js"></script><script>window.addEventListener("load", function(){window.wpcc.init({"border":"thick","corners":"large","colors":{"popup":{"background":"#222222","text":"#ffffff","border":"#fde296"},"button":{"background":"#fde296","text":"#000000"}},"padding":"large","margin":"large","transparency":"25","fontsize":"small","content":{"href":"https://www.cookiepolicygenerator.com/live.php?token=JCotLyBlfYKy4sOYVipIvErAcLKyEZQe","button":"Accept","message":"By using this website you agree to us using cookies to ensure you get the best experience on our website.","link":"Find Out More"}})});</script>
+  </head>
+  <body onload="checkCookie()">
+        <div class="noselect">
+        <div class="switch">Dark mode:              
+        <span class="inner-switch">Disabled</span>
+          </div>
+    </div>
+        <style>
+.switch {
+    align-self: flex-end;
+    margin: 0.9375rem;
+}
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+.inner-switch {
+    user-select: none; /* Standard */
+    display: inline-block;
+    cursor: pointer;
+    border: 1px solid #555;
+    border-radius: 1.25rem;
+    width: 5.125rem;
+    text-align: center;
+    font-size: 1rem;
+    padding: 0.1875rem;
+    margin-left: 0.3125rem;
+}
+.dark,
+.dark * {
+    background-color: #222;
+    color: #e6e6e6;
+    border-color: #e6e6e6;
+}
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js">
+    </script>
+    	 <script>
+     $( ".inner-switch" ).on("click", function() {
+    if( $( "body" ).hasClass( "dark" )) {
+      $( "body" ).removeClass( "dark" );
+      $( ".inner-switch" ).text( "Disabled" );
+    } else {
+      $( "body" ).addClass( "dark" );
+      $( ".inner-switch" ).text( "Enabled" );
+    }
+});
+    </script>
+    <center>
+    <h1 class="noselect" id="awesome">Cameron Ball</h1>
+    <hr>
+      <br>
+      <br>
+      <br>
+      <br>
+    <br style = “line-height:300;”>
+
+<script>
+function myFunction() {
+  document.getElementById("background").style.color = "black";
+  document.getElementById("forground").style.color = "white";
+}
+</script>
+
+      <p></p>
+      <h1>
+        <marquee>Projects:</marquee>
+      </h1>
+    </center>
+    <h3>iHeartEDM</h3>
+    <div style="height:50px;width:60%;border:5px solid #ccc;overflow:auto;">
+iHeartEDM is the best pure EDM 24/7 station, it has the most popular songs and special mixes made specially for the station by our DJs.
+</div>
+    <iframe src="//www.zeno.fm/player/i-heart-edm" width="768" height="290" frameborder="0" scrolling="no"></iframe>
+    <br>
+    <br>
+    <h3>Check This Out Productions</h3>
+    <div style="height:50px;width:60%;border:5px solid #ccc;overflow:auto;">
+As you can see, once there's enough text in this box, the box will grow scroll bars... that's why we call it a scroll box! You could also place an image into the scroll box.
+</div>
+    <hr>
+    <div id="license">
+      <h3>License:</h3>
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br /><small>This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</small></a>
+    </div>
+     <style>
+     body {
+       font-family: 'Hepta Slab', serif;
+       background-color: light-grey;
+       }
+     html {
+       cursor: auto;
+       }
+     #license {
+       cursor: wait;
+       }
+     h1 {
+        cursor: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/happy.png"), none;
+       }
+     #awesome {
+      
+      font-family: futura;
+      font-style: italic;
+      
+      width:100%;
+      
+      margin: 0 auto;
+      text-align: center;
+      
+      color:#313131;
+      font-size:45px;
+      font-weight: bold;
+      position: absolute;
+      -webkit-animation:colorchange 20s infinite alternate;
+      
+      
+    }
+
+    @-webkit-keyframes colorchange {
+      0% {
+        
+        color: blue;
+      }
+      
+      10% {
+        
+        color: #8e44ad;
+      }
+      
+      20% {
+        
+        color: #1abc9c;
+      }
+      
+      30% {
+        
+        color: #d35400;
+      }
+      
+      40% {
+        
+        color: blue;
+      }
+      
+      50% {
+        
+        color: #34495e;
+      }
+      
+      60% {
+        
+        color: blue;
+      }
+      
+      70% {
+        
+        color: #2980b9;
+      }
+      80% {
+     
+        color: #f1c40f;
+      }
+      
+      90% {
+     
+        color: #2980b9;
+      }
+      
+      100% {
+        
+        color: pink;
+      }
+    }
+    </style>
+  </body>
+</html>
