@@ -2,51 +2,17 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>Loading</title>
+  <title>Loader</title>
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
 <!-- partial:index.partial.html -->
-  <div id="loading"><div class="loader">Loading...</div></div>
+<div class="loader">Just A Second...</div>
 <!-- partial -->
   <script>
-        function onReady(callback) {
-      setTimeout( function(){ 
-        // Do something after 1 second 
-        document.getElementById('loading').innerHTML = "Loading";
-      }  , 500 );
-       setTimeout( function(){ 
-        // Do something after 1 second 
-        document.getElementById('loading').innerHTML = "Loading.";
-      }  , 1000 );
-      
-      setTimeout( function(){ 
-        // Do something after 1 second 
-        document.getElementById('loading').innerHTML = "Loading..";
-      }  , 1400 );
-       
-      setTimeout( function(){ 
-        // Do something after 1 second 
-        document.getElementById('loading').innerHTML = "Loading...";
-      }  , 1900 );
-       
-      
-        var intervalID = window.setInterval(checkReady, 3000);
-        function checkReady() {
-            if (document.getElementsByTagName('body')[0] !== undefined) {
-                window.clearInterval(intervalID);
-                callback.call(this);
-            }
-        }
-    }
-    
-    function show(id, value) {
-        document.getElementById(id).style.display = value ? 'block' : 'none';
-    }
-    
-    onReady(function () {
-    window.location.href = 'https://1poo.github.io/1poo/home.html'
-    });
+     setTimeout(function(){
+        window.location.href = 'https://1poo.github.io/1poo/home.html'
+     }, 3500);
   </script>
 </body>
 </html>
